@@ -75,6 +75,12 @@ const {
 	decorationType = 'none',
 	decorationStyle = 'solid'
 } = Astro.props
+
+// Formatear precio con punto de miles (ej: 249990 → "249.990")
+function formatPrice(n: number | null | undefined): string {
+	if (n == null) return ''
+	return n.toLocaleString('es-CL')
+}
 ---
 
 {
@@ -106,7 +112,7 @@ const {
 								data-price-monthly={prices.monthly}
 								data-price-annually={prices.annually}
 							>
-								${prices.annually}
+								${formatPrice(prices.annually)}
 							</span>
 							<span
 								class="card--pricing-price__note"

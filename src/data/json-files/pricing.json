@@ -1,74 +1,72 @@
 {
-	"currency": "USD",
-	"billing_toggle": ["annually", "monthly"],
-	"note": "No hidden fees, cancel anytime.",
+	"currency": "CLP",
 	"plans": [
 		{
-			"id": "starter",
-			"name": "Starter",
-			"tagline": "Get started with the essentials",
+			"id": "landing",
+			"name": "Plan Landing",
+			"tagline": "Página única para tu negocio",
 			"prices": {
-				"annually": 19,
-				"monthly": 24
+				"annually": 249990,
+				"monthly": 249990
 			},
 			"prices_notes": {
-				"annually": "/month, billed annually",
-				"monthly": "/month, billed monthly"
+				"annually": " pago único + IVA",
+				"monthly": " pago único + IVA"
 			},
-			"cta": { "label": "View All Features", "href": "/signup?plan=starter" },
+			"cta": { "label": "Contactar", "href": "/contact" },
 			"features": [
-				"Up to 3 active projects",
-				"Basic integrations (Slack, Google Drive, Dropbox)",
-				"Email support during business hours",
-				"10GB secure storage",
-				"Simple task management tools",
-				"Community access & knowledge base"
+				"Página de inicio (portada)",
+				"Sección Nosotros",
+				"Sección Servicios",
+				"Formulario de contacto",
+				"Diseño responsive (móvil y escritorio)",
+				"Optimización SEO básica"
 			]
 		},
 		{
-			"id": "basic",
-			"name": "Basic",
-			"tagline": "Power and flexibility for growing teams",
+			"id": "business",
+			"name": "Plan Business",
+			"tagline": "Sitio completo para empresas",
 			"prices": {
-				"annually": 29,
-				"monthly": 35
+				"annually": 449990,
+				"monthly": 449990
 			},
 			"prices_notes": {
-				"annually": "/month, billed annually",
-				"monthly": "/month, billed monthly"
+				"annually": " pago único + IVA",
+				"monthly": " pago único + IVA"
 			},
-			"cta": { "label": "View All Features", "href": "/signup?plan=starter" },
-			"tag": "Most Popular",
+			"cta": { "label": "Contactar", "href": "/contact" },
+			"tag": "Más popular",
 			"featured": true,
 			"features": [
-				"Unlimited projects and team members",
-				"All integrations (CRM, analytics, communication tools)",
-				"Priority chat & email support",
-				"20GB secure storage",
-				"Custom branding & white-label options",
-				"Advanced reporting and dashboards"
+				"Diseño personalizado",
+				"Sitio autoadministrable",
+				"Hasta 5 páginas internas",
+				"Correos corporativos",
+				"Botón de WhatsApp",
+				"Optimización SEO avanzada"
 			]
 		},
 		{
-			"id": "pro",
-			"name": "Pro",
-			"tagline": "Tailored solutions for large organizations",
+			"id": "ecommerce",
+			"name": "Plan E-commerce",
+			"tagline": "Tienda online lista para vender",
 			"prices": {
-				"annually": 49,
-				"monthly": 55
+				"annually": 649990,
+				"monthly": 649990
 			},
 			"prices_notes": {
-				"annually": "/month, billed annually",
-				"monthly": "/month, billed monthly"
+				"annually": " pago único + IVA",
+				"monthly": " pago único + IVA"
 			},
-			"cta": { "label": "View All Features", "href": "/signup?plan=starter" },
+			"cta": { "label": "Contactar", "href": "/contact" },
 			"features": [
-				"Everything in basic",
-				"Dedicated success manager",
-				"Priority chat & email support",
-				"Unlimited secure storage",
-				"Custom data residency options (EU/US, APAC)",
-				"Governance, risk & compliance tools"
+				"Todo lo del Plan Business",
+				"Carrito de compras",
+				"Catálogo de productos",
+				"Buscador interno",
+				"Opciones de envío (Chilexpress, Starken)",
+				"Métodos de pago (Webpay, Mercado Pago)"
 			]
 		}
 	]

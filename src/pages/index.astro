@@ -1,7 +1,7 @@
 ---
 // Home Page
 // ------------
-// Description: The home page is a page that displays the most important information.
+// Description: Landing de una sola página para Galta, navegable por anclas desde el menú.
 
 // Components
 // - Layout
@@ -9,64 +9,63 @@ import Layout from '../layouts/Layout.astro'
 
 // - Blocks
 import Hero from '../components/blocks/hero/CenteredHeroCTA.astro'
-import Brand from '../components/blocks/brand/Marquee.astro'
 import Features from '../components/blocks/features/MasonryGrid.astro'
+import Pricing from '../components/blocks/pricing/SimplePricing.astro'
 import ScrollSpySteps from '../components/blocks/onboarding/Steps.astro'
-import TestimonialMasonry from '../components/blocks/testimonials/TestimonialMasonry.astro'
 import Faq from '../components/blocks/faq/StickyFaq.astro'
 import CTA from '../components/blocks/cta/CTAPrimary.astro'
 
 // Content
 // - SEO
 const SEO = {
-	title:
-		'Mizu Light Astro Theme | Modern SaaS & Startup Landing Page Template for Fast Product Launches by Oxygenna',
+	title: 'Galta | Desarrollo web, e-commerce y automatización para empresas en Chile',
 	description:
-		'Launch your next big idea with Mizu Light — a sleek, responsive Astro theme built for SaaS startups and tech companies. Streamline onboarding, showcase features beautifully, and convert visitors into users faster.'
+		'Sitios web, tiendas online, automatización de procesos y consultoría informática. Trabajamos con empresas de banca, minería y retail en Chile.'
 }
 // - Hero data
 const heroData = {
-	title: 'Launch smarter Start faster',
-	subtitle: 'build for the future',
-	buttonLink: '/pricing',
-	buttonText: 'Try it for free!',
-	text: 'Let AI handle the heavy lifting — from data insights to launch strategies — so you can focus on creating products that customers love'
-}
-// - Brand data
-const brandData = {
-	title: 'Built in collaboration with'
-}
-// - Testimonial data
-const testimonialData = {
-	title: 'Loved by early adopters everywhere',
-	subtitle: 'What other are saying'
+	title: 'Tecnología que hace crecer tu negocio',
+	subtitle: 'GALTA — Consultora Informática',
+	buttonLink: '/contact',
+	buttonText: 'Conversemos tu proyecto',
+	text: 'Desarrollamos sitios web, tiendas online y automatizamos procesos con IA para que tu empresa opere de forma más simple y eficiente.'
 }
 // - FAQ data
 const faqData = {
-	title: 'Frequently Asked Questions',
-	subtitle: 'Everything you need to know'
+	title: 'Preguntas frecuentes',
+	subtitle: 'Todo lo que necesitas saber'
 }
 // - CTA data
 const ctaData = {
-	title: 'Launch your next big idea today',
-	text: 'Join creators, teams, and startups already turning their ideas into reality. Get started in minutes and see how simple launching can be when everything works together seamlessly.',
-	buttonLink: '/pricing',
-	buttonText: 'Try it for free!'
+	title: 'Hablemos de tu proyecto',
+	text: 'Cuéntanos qué necesita tu empresa y te proponemos la mejor solución, desde un sitio web hasta automatizar tus procesos con inteligencia artificial.',
+	buttonLink: '/contact',
+	buttonText: 'Escríbenos'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero
-		title={heroData.title}
-		subtitle={heroData.subtitle}
-		buttonLink={heroData.buttonLink}
-		buttonText={heroData.buttonText}
-	/>
-	<Brand title={brandData.title} />
-	<Features />
-	<ScrollSpySteps />
-	<TestimonialMasonry title={testimonialData.title} subtitle={testimonialData.subtitle} />
-	<Faq subtitle={faqData.subtitle} title={faqData.title} />
+	<div id="inicio" class="scroll-mt-22 lg:scroll-mt-[6.25rem]">
+		<Hero
+			title={heroData.title}
+			subtitle={heroData.subtitle}
+			text={heroData.text}
+			buttonLink={heroData.buttonLink}
+			buttonText={heroData.buttonText}
+		/>
+	</div>
+	<div id="servicios" class="scroll-mt-22 lg:scroll-mt-[6.25rem]">
+		<Features />
+	</div>
+	<div id="planes" class="scroll-mt-22 lg:scroll-mt-[6.25rem]">
+		<Pricing title="Planes y precios" subtitle="Elige el que mejor se ajuste a tu negocio" />
+	</div>
+	<div id="proceso" class="scroll-mt-22 lg:scroll-mt-[6.25rem]">
+		<ScrollSpySteps />
+	</div>
+	<div id="faq" class="scroll-mt-22 lg:scroll-mt-[6.25rem]">
+		<Faq subtitle={faqData.subtitle} title={faqData.title} />
+	</div>
 	<CTA
 		title={ctaData.title}
 		text={ctaData.text}

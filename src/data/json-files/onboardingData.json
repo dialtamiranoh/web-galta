@@ -1,99 +1,75 @@
 {
-	"subtitle": "How it works",
-	"title": "A thoughtful flow from idea to action.",
+	"subtitle": "Cómo trabajamos",
+	"title": "De la idea a un proyecto funcionando",
 	"nav": [
-		{ "id": "step-1", "index": "1", "label": "01. Start the Chat", "color": "#FFEAD0" },
-		{ "id": "step-2", "index": "2", "label": "02. View Insights", "color": "#F7F2FC" },
-		{ "id": "step-3", "index": "3", "label": "03. Set Your Style", "color": "#EDF8FF" },
-		{ "id": "step-4", "index": "4", "label": "04. Accept Payments", "color": "#FEF0F0" }
+		{ "id": "step-1", "index": "1", "label": "01. Diagnóstico", "color": "#FFEAD0" },
+		{ "id": "step-2", "index": "2", "label": "02. Propuesta", "color": "#F7F2FC" },
+		{ "id": "step-3", "index": "3", "label": "03. Desarrollo", "color": "#EDF8FF" },
+		{ "id": "step-4", "index": "4", "label": "04. Lanzamiento y soporte", "color": "#FEF0F0" }
 	],
 	"steps": [
 		{
 			"id": "step-1",
 			"index": "01",
-			"title": "Your setup starts with a simple conversation",
-			"subtitle": "step 01",
+			"title": "Entendemos tu negocio y tu problema",
+			"subtitle": "paso 01",
 			"color": "#FFEAD0",
 			"body": [
-				"No long forms, no onboarding maze — just start with a quick conversation. As soon as you arrive, the AI greets you and begins a casual, intelligent chat to understand your goals, habits, and what you’re here to build. It’s like talking to a clever co-founder who’s actually listening. ",
-				"Whether you're brainstorming ideas, organizing thoughts, or setting up a project, the system uses your responses to shape a workspace that feels instantly familiar. It’s a first step that’s simple, fast, and surprisingly fun."
+				"Partimos con una conversación para entender qué necesita tu empresa: si es un sitio web, una tienda online, o automatizar procesos que hoy se hacen a mano.",
+				"Revisamos tu situación actual — herramientas que usas, equipo, presupuesto y plazos — para proponerte algo realista, no una solución genérica."
 			],
-			"cta": { "label": "More about getting started", "href": "/features" },
+			"cta": { "label": "Ver nuestros servicios", "href": "#servicios" },
 			"media": {
-				"front": {
-					"src": "/steps/steps/step_01_front.webp",
-					"alt": "step 1"
-				},
-				"back": {
-					"src": "/steps/steps/step_01_back.webp",
-					"alt": "step 1"
-				}
+				"front": { "src": "/steps/steps/step_01_front.webp", "alt": "Diagnóstico inicial" },
+				"back": { "src": "/steps/steps/step_01_back.webp", "alt": "Diagnóstico inicial" }
 			}
 		},
 		{
 			"id": "step-2",
 			"index": "02",
-			"title": "Get insights without asking for them",
-			"subtitle": "step 02",
+			"title": "Te proponemos una solución concreta",
+			"subtitle": "paso 02",
 			"color": "#F7F2FC",
 			"body": [
-				"Once you're in, the system quietly starts paying attention — but in a good way. It tracks patterns in how you work, what you focus on, and where you spend your time. The result? ",
-				"Useful, real-time insights without any effort on your part. You’ll start seeing trends, highlights, and even gentle nudges that help you understand what’s working and what’s getting in the way. It’s analytics, but without the overwhelm — just the right amount of clarity to keep you in flow."
+				"Con el diagnóstico claro, armamos una propuesta con alcance, tecnología a usar y tiempos estimados — sin letra chica ni sorpresas después.",
+				"Ajustamos la propuesta contigo hasta que quede clara y ambos sepamos exactamente qué se va a construir."
 			],
-			"cta": { "label": "Read about insights", "href": "/features" },
+			"cta": { "label": "Conversemos tu proyecto", "href": "/contact" },
 			"media": {
-				"front": {
-					"src": "/steps/steps/step_02_front.webp",
-					"alt": "step 2"
-				},
-				"back": {
-					"src": "/steps/steps/step_02_back.webp",
-					"alt": "step 2"
-				}
+				"front": { "src": "/steps/steps/step_02_front.webp", "alt": "Propuesta de trabajo" },
+				"back": { "src": "/steps/steps/step_02_back.webp", "alt": "Propuesta de trabajo" }
 			}
 		},
 		{
 			"id": "step-3",
 			"index": "03",
-			"title": "Learns what you like (and what you don’t)",
-			"subtitle": "step 03",
+			"title": "Desarrollamos con avances visibles",
+			"subtitle": "paso 03",
 			"color": "#EDF8FF",
 			"body": [
-				"No long forms, no onboarding maze — just start with a quick conversation. As soon as you arrive, the AI greets you and begins a casual, intelligent chat to understand your goals, habits, and what you’re here to build. It’s like talking to a clever co-founder who’s actually listening. ",
-				"Whether you're brainstorming ideas, organizing thoughts, or setting up a project, the system uses your responses to shape a workspace that feels instantly familiar. It’s a first step that’s simple, fast, and surprisingly fun."
+				"Construimos tu sitio, tienda o automatización en etapas, mostrándote avances en el camino en vez de desaparecer hasta el final.",
+				"Así puedes dar feedback a tiempo y el resultado final no te toma por sorpresa."
 			],
-			"cta": { "label": "More about styles", "href": "/features" },
+			"cta": { "label": "Cómo trabajamos", "href": "#proceso" },
 			"media": {
-				"front": {
-					"src": "/steps/steps/step_03_front.webp",
-					"alt": "step 3"
-				},
-				"back": {
-					"src": "/steps/steps/step_03_back.webp",
-					"alt": "step 3"
-				}
+				"front": { "src": "/steps/steps/step_03_front.webp", "alt": "Desarrollo del proyecto" },
+				"back": { "src": "/steps/steps/step_03_back.webp", "alt": "Desarrollo del proyecto" }
 			}
 		},
 		{
 			"id": "step-4",
 			"index": "04",
-			"title": "Get paid without the paperwork",
-			"subtitle": "step 04",
+			"title": "Lanzamos y seguimos disponibles",
+			"subtitle": "paso 04",
 			"color": "#FEF0F0",
 			"body": [
-				"When you’re ready to share your work — whether it’s a product, a service, or something entirely new — the system has everything in place. ",
-				"Built-in payment tools make it easy to accept payments, send invoices, or offer subscriptions without needing extra tools or plugins. It’s secure, fast, and frictionless. You focus on delivering value — we’ll handle the rest."
+				"Publicamos tu proyecto en producción y nos aseguramos de que todo funcione correctamente antes de darlo por cerrado.",
+				"Después del lanzamiento seguimos disponibles para soporte, ajustes y para sumar nuevas funcionalidades cuando tu negocio lo necesite."
 			],
-			"cta": { "label": "Accept payments", "href": "/features" },
+			"cta": { "label": "Hablar con nosotros", "href": "/contact" },
 			"media": {
-				"front": {
-					"src": "/steps/steps/step_02_front.webp",
-					"alt": "step 4"
-				},
-				"back": {
-					"src": "/steps/steps/step_02_back.webp",
-					"alt": "step 4"
-				}
+				"front": { "src": "/steps/steps/step_02_front.webp", "alt": "Lanzamiento y soporte" },
+				"back": { "src": "/steps/steps/step_02_back.webp", "alt": "Lanzamiento y soporte" }
 			}
 		}
 	]

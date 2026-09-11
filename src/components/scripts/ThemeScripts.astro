@@ -26,6 +26,7 @@
 		})
 
 		// Menu toggle
+		// Menu toggle
 		const headerToggle = document.querySelector('.header__toggle')
 		const headerMenu = document.querySelector('.header__menu')
 		if (headerToggle && headerMenu) {
@@ -35,6 +36,18 @@
 				const newExpandedValue = isExpanded ? 'false' : 'true'
 				headerToggle.setAttribute('aria-expanded', newExpandedValue)
 				headerMenu.classList.toggle('menu--open')
+			})
+
+			// Cerrar el menú móvil al hacer click en un link de ancla (#seccion),
+			// ya que no dispara una navegación de página que lo cierre solo.
+			headerMenu.querySelectorAll('a.header__menu-link').forEach((link) => {
+				link.addEventListener('click', () => {
+					if (headerMenu.classList.contains('menu--open')) {
+						headerToggle.classList.remove('toggle--open')
+						headerToggle.setAttribute('aria-expanded', 'false')
+						headerMenu.classList.remove('menu--open')
+					}
+				})
 			})
 		}
 

@@ -22,15 +22,14 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle:
-		'Mizu Light Astro Theme | Modern SaaS & Startup Landing Page Template for Fast Product Launches by Oxygenna',
+	siteTitle: 'Galta | Consultora informática de desarrollo web y automatización en Chile',
 	siteDescription:
-		'Launch your next big idea with Mizu Light — a sleek, responsive Astro theme built for SaaS startups and tech companies. Streamline onboarding, showcase features beautifully, and convert visitors into users faster.',
+		'Sitios web, e-commerce, automatización de procesos y consultoría informática para empresas en Chile.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo-light.svg',
 		srcDark: '/logo-dark.svg',
-		alt: 'Mizu Light logo'
+		alt: 'Galta'
 	},
 	canonical: true,
 	noindex: false,

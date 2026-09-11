@@ -1,0 +1,60 @@
+---
+// Simple Pricing Block (sin toggle mensual/anual)
+// -------------------------
+// Muestra las tarjetas de precios directamente, sin switcher de facturación.
+
+// Components
+// - Layout
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+// - UI
+import Header from '../../ui/Header.astro'
+import PricingCard from '../../ui/cards/PricingCard.astro'
+
+// Content
+// - Props
+type Props = {
+	title?: string
+	subtitle?: string
+}
+const { title = '', subtitle = '' } = Astro.props
+
+// - Data
+import pricing from '../../../data/json-files/pricing.json'
+---
+
+<Section>
+	<Row style="transparent">
+		<Col span="12" style="transparent">
+			<Header title={title} subtitle={subtitle} headingLevel="h2" titleWidth="max-w-2xl" />
+		</Col>
+	</Row>
+</Section>
+
+<Section>
+	<Row style="transparent">
+		{
+			pricing.plans.map((plan) => (
+				<Col span="4" style="semitransparent">
+					<PricingCard
+						id={plan.id}
+						title={plan.name}
+						subtitle={plan.tagline}
+						prices={{
+							annually: plan.prices.annually,
+							monthly: plan.prices.monthly
+						}}
+						pricesNotes={plan.prices_notes}
+						tag={plan.tag}
+						featured={plan.featured}
+						features={plan.features}
+						cta={plan.cta}
+						decorationType="all"
+						decorationStyle="solid"
+					/>
+				</Col>
+			))
+		}
+	</Row>
+</Section>
