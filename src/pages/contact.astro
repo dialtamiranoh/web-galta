@@ -1,47 +1,27 @@
 ---
+// Contact Page
+// ------------
+// Description: Página de contacto con formulario Web3Forms para Galta.
+
 // Components
 // - Layout
 import Layout from '../layouts/Layout.astro'
 
 // - Blocks
 import Hero from '../components/blocks/hero/SimpleHeroBasic.astro'
-import ContactInfo from '../components/blocks/contact/ContactInfoCards.astro'
-import Brand from '../components/blocks/brand/Marquee.astro'
-import Faq from '../components/blocks/faq/StickyFaq.astro'
-import CTA from '../components/blocks/cta/CTAPrimary.astro'
 
 // Content
 // - SEO
 const SEO = {
-	title: 'Mizu Light Astro Theme | Contact',
+	title: 'Contacto | Galta — Consultora Informática',
 	description:
-		'Get in touch with the Mizu Light team for support, customization, or partnership inquiries. We’re here to help you make the most of your Astro theme.'
+		'Cuéntanos qué necesita tu empresa. Te respondemos en menos de 24 horas.'
 }
 // - Hero data
 const heroData = {
-	title: 'Got a question before take-off?',
-	subtitle: 'Let’s Connect',
-	text: 'Reach out directly to the team that can best help you. We’re here to answer questions and guide you ahead of launch.',
-}
-// - Contact data
-const contactData = {
-	title: 'Choose support, sales, or requests and let’s get started.'
-}
-// - Brand data
-const brandData = {
-	title: 'Built in collaboration with'
-}
-// - FAQ data
-const faqData = {
-	title: 'Everything you need to know',
-	subtitle: 'Frequently Asked Questions'
-}
-// - CTA data
-const ctaData = {
-	title: 'Let’s Build the Future Together',
-	text: 'We’re always looking for passionate, driven people to join our team. Even if you don’t see the perfect role listed, we’d still love to hear from you. Send us your CV and let’s explore how we can grow together.',
-	buttonLink: '/contact',
-	buttonText: 'Send Your CV'
+	title: 'Conversemos tu proyecto',
+	subtitle: 'Contacto',
+	text: 'Cuéntanos qué necesitas y te respondemos en menos de 24 horas con una propuesta clara, sin compromiso.'
 }
 ---
 
@@ -51,13 +31,216 @@ const ctaData = {
 		subtitle={heroData.subtitle}
 		text={heroData.text}
 	/>
-	<ContactInfo title={contactData.title} />
-	<Brand title={brandData.title} />
-	<Faq subtitle={faqData.subtitle} title={faqData.title} />
-	<CTA
-		title={ctaData.title}
-		text={ctaData.text}
-		buttonLink={ctaData.buttonLink}
-		buttonText={ctaData.buttonText}
-	/>
+	<section class="contact-form-section">
+		<div class="container">
+			<div class="contact-form-wrapper">
+				<form
+					action="https://api.web3forms.com/submit"
+					method="POST"
+					class="contact-form"
+					id="contact-form"
+				>
+					<input type="hidden" name="access_key" value="a6761b83-a7e2-4054-9fae-4d7a541edd2a" />
+					<input type="hidden" name="subject" value="Nuevo mensaje desde galta.cl" />
+					<input type="hidden" name="from_name" value="Formulario galta.cl" />
+					<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+					<div class="form-grid">
+						<div class="form-group">
+							<label for="name">Nombre</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								placeholder="Tu nombre"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="tu@email.com"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<label for="phone">Teléfono (opcional)</label>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								placeholder="+56 9 1234 5678"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="service">¿Qué servicio te interesa?</label>
+							<select id="service" name="service" required>
+								<option value="" disabled selected>Selecciona una opción</option>
+								<option value="Sitio Web">Sitio Web</option>
+								<option value="E-commerce">E-commerce</option>
+								<option value="Automatización">Automatización</option>
+								<option value="Consultoría Informática">Consultoría Informática</option>
+								<option value="Otro">Otro</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group form-group--full">
+						<label for="message">Cuéntanos sobre tu proyecto</label>
+						<textarea
+							id="message"
+							name="message"
+							rows="5"
+							placeholder="Descríbenos brevemente qué necesitas..."
+							required
+						></textarea>
+					</div>
+
+					<div class="form-submit">
+						<button type="submit" id="submit-btn">Enviar mensaje</button>
+					</div>
+
+					<div id="form-result" class="form-result"></div>
+				</form>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<script>
+	const form = document.getElementById('contact-form') as HTMLFormElement
+	const result = document.getElementById('form-result') as HTMLDivElement
+	const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement
+
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault()
+		submitBtn.disabled = true
+		submitBtn.textContent = 'Enviando...'
+		result.innerHTML = ''
+
+		try {
+			const response = await fetch(form.action, {
+				method: form.method,
+				body: new FormData(form),
+			})
+			const data = await response.json()
+
+			if (data.success) {
+				result.innerHTML = '<p class="form-success">¡Mensaje enviado! Te responderemos pronto.</p>'
+				form.reset()
+			} else {
+				result.innerHTML = '<p class="form-error">Hubo un error, intenta de nuevo o escríbenos por WhatsApp.</p>'
+			}
+		} catch {
+			result.innerHTML = '<p class="form-error">Error de conexión. Intenta de nuevo.</p>'
+		}
+		submitBtn.disabled = false
+		submitBtn.textContent = 'Enviar mensaje'
+	})
+</script>
+
+<style>
+	.contact-form-section {
+		padding: 0 0 4rem;
+	}
+	.container {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+	.contact-form-wrapper {
+		background: white;
+		border: 1px solid #e5e5e5;
+		padding: 2.5rem;
+	}
+	:global(.dark) .contact-form-wrapper {
+		background: #0a0a0a;
+		border-color: #333;
+	}
+	.form-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+	@media (max-width: 640px) {
+		.form-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.form-group--full {
+		margin-top: 1.5rem;
+	}
+	label {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: #525252;
+	}
+	:global(.dark) label {
+		color: #a3a3a3;
+	}
+	input, select, textarea {
+		width: 100%;
+		padding: 0.75rem 1rem;
+		border: 1px solid #d4d4d4;
+		background: white;
+		font-size: 1rem;
+		color: #171717;
+		transition: border-color 0.2s;
+	}
+	:global(.dark) input,
+	:global(.dark) select,
+	:global(.dark) textarea {
+		background: #171717;
+		border-color: #404040;
+		color: #fafafa;
+	}
+	input:focus, select:focus, textarea:focus {
+		outline: none;
+		border-color: #f59e0b;
+	}
+	textarea {
+		resize: vertical;
+		min-height: 120px;
+	}
+	.form-submit {
+		margin-top: 2rem;
+	}
+	button[type="submit"] {
+		width: 100%;
+		padding: 1rem;
+		background: #ea580c;
+		color: white;
+		font-size: 1rem;
+		font-weight: 600;
+		border: none;
+		cursor: pointer;
+		transition: background 0.2s;
+	}
+	button[type="submit"]:hover {
+		background: #c2410c;
+	}
+	button[type="submit"]:disabled {
+		background: #9ca3af;
+		cursor: not-allowed;
+	}
+	.form-result {
+		margin-top: 1rem;
+		text-align: center;
+	}
+	.form-success {
+		color: #16a34a;
+		font-weight: 500;
+	}
+	.form-error {
+		color: #dc2626;
+		font-weight: 500;
+	}
+</style>

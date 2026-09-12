@@ -27,7 +27,7 @@ const { logo, footerAbout, footerColumns, copyright } = await getFooterNavigatio
 		<!-- Main footer -->
 		<Row classes="gap-y-0!">
 			<!-- Logo -->
-			<Col span="4" classes="flex justify-center items-center ">
+						<Col span="4" classes="flex justify-center items-center ">
 				<div class="footer__logo">
 					{
 						logo?.src && (
@@ -35,15 +35,15 @@ const { logo, footerAbout, footerColumns, copyright } = await getFooterNavigatio
 								<img
 									src={logo.src}
 									alt={logo.alt}
-									width="426"
-									height="426"
+									width="120"
+									height="120"
 									class="block dark:hidden"
 								/>
 								<img
 									src={logo.srcDark}
 									alt={logo.alt}
-									width="426"
-									height="426"
+									width="120"
+									height="120"
 									class="hidden dark:block"
 								/>
 							</a>

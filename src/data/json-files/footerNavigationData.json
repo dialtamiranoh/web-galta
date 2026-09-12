@@ -1,47 +1,44 @@
 {
 	"logo": {
-		"src": "/logo-light.svg",
-		"srcDark": "/logo-dark.svg",
-		"alt": "Mizu Light logo"
+		"src": "/icon-galta.png",
+		"srcDark": "/icon-galta.png",
+		"alt": "Galta"
 	},
 	"footerAbout": {
-		"aboutText": "Mizu Light, from idea to impact, without the noise."
+		"aboutText": "Galta, tecnología que hace crecer tu negocio."
 	},
 	"footerColumns": [
 		{
-			"title": "Your Launchpad",
+			"title": "Navegación",
 			"links": [
-				{ "label": "Home", "href": "/" },
-				{ "label": "Features", "href": "/features" },
-				{ "label": "Get Started", "href": "/get-started" },
-				{ "label": "Pricing", "href": "/pricing" }
+				{ "label": "Inicio", "href": "#inicio" },
+				{ "label": "Servicios", "href": "#servicios" },
+				{ "label": "Planes", "href": "#planes" },
+				{ "label": "Contacto", "href": "/contact" }
 			]
 		},
 		{
-			"title": "Meet the Crew",
+			"title": "Servicios",
 			"links": [
-				{ "label": "About", "href": "/about" },
-				{ "label": "Blog", "href": "/blog" },
-				{ "label": "Contact", "href": "/contact" }
+				{ "label": "Sitios Web", "href": "#servicios" },
+				{ "label": "E-commerce", "href": "#servicios" },
+				{ "label": "Automatización", "href": "#servicios" },
+				{ "label": "Consultoría", "href": "#servicios" }
 			]
 		},
 		{
-			"title": "Let's Connect",
+			"title": "Conecta con nosotros",
 			"links": [
-				{ "label": "Twitter / X", "href": "https://x.com/yourhandle" },
-				{ "label": "LinkedIn", "href": "https://www.linkedin.com/company/yourcompany" },
-				{ "label": "GitHub", "href": "https://github.com/yourorg" },
-				{ "label": "LinkedIn", "href": "https://www.linkedin.com/in/yourprofile" },
-				{ "label": "Threads", "href": "https://www.threads.net/@yourhandle" }
+				{ "label": "LinkedIn", "href": "https://www.linkedin.com/company/galta" },
+				{ "label": "WhatsApp", "href": "https://wa.me/56992867100" }
 			]
 		}
 	],
 	"copyright": {
-		"text": "Mizu Light, all rights reserved 2026",
+		"text": "Galta SpA, todos los derechos reservados 2026",
 		"legal": [
-			{ "label": "Terms", "href": "/terms" },
-			{ "label": "Conditions", "href": "/conditions" },
-			{ "label": "Privacy Policy", "href": "/privacy" }
+			{ "label": "Términos", "href": "/terms" },
+			{ "label": "Política de privacidad", "href": "/privacy" }
 		]
 	}
 }

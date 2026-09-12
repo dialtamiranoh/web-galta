@@ -9,8 +9,7 @@
 		{ "name": "Servicios", "link": "#servicios" },
 		{ "name": "Planes", "link": "#planes" },
 		{ "name": "Cómo trabajamos", "link": "#proceso" },
-		{ "name": "Preguntas frecuentes", "link": "#faq" },
-		{ "name": "Blog", "link": "/blog" }
+		{ "name": "Preguntas frecuentes", "link": "#faq" }
 	],
 	"navActions": [{ "name": "Contáctanos", "link": "/contact" }]
 }

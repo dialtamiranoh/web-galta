@@ -115,9 +115,7 @@ function formatPrice(n: number | null | undefined): string {
 								${formatPrice(prices.annually)}
 							</span>
 							<span
-								class="card--pricing-price__note"
-								data-price-monthly-note={pricesNotes.monthly}
-								data-price-annually-note={pricesNotes.annually}
+								class="card--pricing-price__note block text-base text-neutral-500"
 							>
 								{pricesNotes.annually}
 							</span>
@@ -158,8 +156,8 @@ function formatPrice(n: number | null | undefined): string {
 				)}
 			</CardBody>
 			{cta && !featured && (
-				<CardFooter classes="bg-neutral-50 dark:bg-neutral-900 bg-[url('/bgs/dot-gray-light.svg')] dark:bg-[url('/bgs/dot-gray-dark.svg')] bg-size-[18px] bg-fixed">
-					<Link link={cta.href} aria-label={`${cta.label} - ${title}`}>
+				<CardFooter classes="bg-primary-600 dark:bg-primary-600 bg-[url('/bgs/dot-gray-transparent.svg')] bg-size-[18px] bg-fixed text-white">
+					<Link link={cta.href} aria-label={`${cta.label} - ${title}`} classes="text-inherit!">
 						{cta.label}
 					</Link>
 					<DecorationBorder type="top " style="dashed" />
