@@ -22,13 +22,13 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Galta | Consultora informática de desarrollo web y automatización en Chile',
+	siteTitle: 'Galta | Desarrollo web, e-commerce y automatización de procesos para pymes en Chile',
 	siteDescription:
-		'Sitios web, e-commerce, automatización de procesos y consultoría informática para empresas en Chile.',
+		'Diseño y desarrollo de sitios web, tiendas online, automatización con RPA e IA, y consultoría informática para empresas y pymes en Santiago de Chile.',
 	ogImage: '/og.jpg',
 	logo: {
-		src: '/logo-light.svg',
-		srcDark: '/logo-dark.svg',
+		src: '/logo-light.png',
+		srcDark: '/logo-dark.png',
 		alt: 'Galta'
 	},
 	canonical: true,

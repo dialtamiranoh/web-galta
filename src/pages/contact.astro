@@ -100,6 +100,9 @@ const heroData = {
 					</div>
 
 					<div class="form-submit">
+						<div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+							<div class="h-captcha" data-captcha="true"></div>
+						</div>
 						<button type="submit" id="submit-btn">Enviar mensaje</button>
 					</div>
 
@@ -109,6 +112,8 @@ const heroData = {
 		</div>
 	</section>
 </Layout>
+
+<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
 
 <script>
 	const form = document.getElementById('contact-form') as HTMLFormElement

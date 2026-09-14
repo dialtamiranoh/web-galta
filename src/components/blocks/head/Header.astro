@@ -58,6 +58,75 @@ const {
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="sitemap" href="/sitemap-index.xml" />
 	<meta name="generator" content={Astro.generator} />
-	<meta name="theme-color" content="#134e4a" />
+	<meta name="theme-color" content="#ea580c" />
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "Galta SpA",
+		"description": "Consultora informática especializada en desarrollo web, e-commerce, automatización de procesos con RPA e IA, y consultoría tecnológica para empresas y pymes en Chile.",
+		"url": "https://galta.cl",
+		"logo": "https://galta.cl/logo-light.png",
+		"image": "https://galta.cl/logo-light.png",
+		"telephone": "+56992867100",
+		"email": "contacto@galta.cl",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Santiago",
+			"addressRegion": "Región Metropolitana",
+			"addressCountry": "CL"
+		},
+		"areaServed": {
+			"@type": "Country",
+			"name": "Chile"
+		},
+		"openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+			"opens": "09:00",
+			"closes": "18:00"
+		},
+		"priceRange": "$$",
+		"sameAs": [
+			"https://www.linkedin.com/company/galta"
+		],
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Servicios de Galta",
+			"itemListElement": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Desarrollo de Sitios Web",
+						"description": "Sitios corporativos y landing pages a medida, rápidos y optimizados para SEO."
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "E-commerce",
+						"description": "Tiendas online con pasarela de pago Webpay y Mercado Pago, catálogo de productos y métodos de envío."
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Automatización de Procesos",
+						"description": "Automatización de tareas repetitivas con RPA e inteligencia artificial"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Consultoría Informática",
+						"description": "Asesoría en arquitectura de software, elección de tecnología e infraestructura para empresas."
+					}
+				}
+			]
+		}
+	})} />
 	<ClientRouter fallback="swap" />
 </head>

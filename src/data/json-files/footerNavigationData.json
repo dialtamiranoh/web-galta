@@ -11,19 +11,19 @@
 		{
 			"title": "Navegación",
 			"links": [
-				{ "label": "Inicio", "href": "#inicio" },
-				{ "label": "Servicios", "href": "#servicios" },
-				{ "label": "Planes", "href": "#planes" },
+				{ "label": "Inicio", "href": "/#inicio" },
+				{ "label": "Servicios", "href": "/#servicios" },
+				{ "label": "Planes", "href": "/#planes" },
 				{ "label": "Contacto", "href": "/contact" }
 			]
 		},
 		{
 			"title": "Servicios",
 			"links": [
-				{ "label": "Sitios Web", "href": "#servicios" },
-				{ "label": "E-commerce", "href": "#servicios" },
-				{ "label": "Automatización", "href": "#servicios" },
-				{ "label": "Consultoría", "href": "#servicios" }
+				{ "label": "Sitios Web", "href": "/#servicios" },
+				{ "label": "E-commerce", "href": "/#servicios" },
+				{ "label": "Automatización", "href": "/#servicios" },
+				{ "label": "Consultoría", "href": "/#servicios" }
 			]
 		},
 		{
